@@ -7,3 +7,6 @@ add license
 ci
 cd
 svelte sapper
+.dockerignore
+typescript
+domain: casapetri.ro
