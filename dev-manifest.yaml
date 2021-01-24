@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cpn-service
+  labels:
+    app: cpn
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+  selector:
+    app: cpn
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nodemodules
+spec: 
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app
+spec: 
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpn-deployment
+  labels:
+    app: cpn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpn
+  template:
+    metadata:
+      labels:
+        app: cpn
+    spec:
+      containers:
+      - name: cpn
+        image: localhost:32000/cpn:registry
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+          - mountPath: /usr/src/app/
+            name: app
+          - mountPath: /usr/src/app/node_modules
+            name: nodemodules
+      volumes:
+        - name: app
+          persistentVolumeClaim:
+            claimName: app
+        - name: nodemodules
+          persistentVolumeClaim:
+            claimName: nodemodules
+
