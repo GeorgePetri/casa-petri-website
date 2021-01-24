@@ -1,6 +1,4 @@
-container
 microk8s
-node14
 update readme
 update description
 add license
@@ -10,3 +8,6 @@ svelte sapper
 .dockerignore
 typescript
 domain: casapetri.ro
+container for prod/ci
+sudo docker run -dt -v /home/wry/casa-petri-website:/usr/src/app -v nodemodules:/usr/src/app/node_modules -p 3000:3000 cpn
+https://www.freecodecamp.org/news/how-to-enable-live-reload-on-docker-based-applications/
