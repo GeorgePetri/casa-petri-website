@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: cpn
-        image: localhost:32000/cpn:registry
+        image: cpn
         ports:
         - containerPort: 3000
