@@ -1,5 +1,7 @@
 FROM node:14
 
+LABEL org.opencontainers.image.source=https://github.com/georgepetri/casa-petri-website
+
 #todo not sure i need this
 WORKDIR /usr/src/app
 

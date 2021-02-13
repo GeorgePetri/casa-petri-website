@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: cpn
-        image: cpn
+        image: ghcr.io/georgepetri/cpn
         ports:
         - containerPort: 3000
