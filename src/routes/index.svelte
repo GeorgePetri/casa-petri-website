@@ -41,7 +41,6 @@
 </svelte:head>
 
 <h1>Great success!</h1>
-<h1>Great success!</h1>
 
 <figure>
 	<img alt="Success Kid" src="{successkid}">

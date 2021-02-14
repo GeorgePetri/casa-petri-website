@@ -29,6 +29,7 @@ spec:
     spec:
       containers:
       - name: cpn
-        image: ghcr.io/georgepetri/cpn
+        image: ghcr.io/georgepetri/cpn:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
