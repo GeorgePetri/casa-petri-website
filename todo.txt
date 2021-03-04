@@ -5,7 +5,6 @@ ci
 cd
 svelte sapper
 .dockerignore
-typescript
 domain: casapetri.ro
 container for prod/ci
 sudo docker run -dt -v /home/wry/casa-petri-website:/usr/src/app -v nodemodules:/usr/src/app/node_modules -p 3000:3000 cpn
