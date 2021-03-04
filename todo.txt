@@ -11,3 +11,6 @@ sudo docker run -dt -v /home/wry/casa-petri-website:/usr/src/app -v nodemodules:
 https://www.freecodecamp.org/news/how-to-enable-live-reload-on-docker-based-applications/
 what to do about package-lock.json
 proper photos at proper resolutions
+todo test on mobile
+no errors
+no warnings

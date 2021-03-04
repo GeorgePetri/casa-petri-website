@@ -1,8 +1,11 @@
 <script lang="ts">
-    const entries: { title: string }[] = [
-        { title: "Camera1" },
-        { title: "Camera2" },
-        { title: "Camera3" },
+    const entries: {
+        title: string;
+        image: string;
+    }[] = [
+        { title: "Camera1", image: "images/IMG_0107.JPEG" },
+        { title: "Camera2", image: "images/IMG_0108.JPEG" },
+        { title: "Camera3", image: "images/IMG_0109.JPG" },
     ];
 
     const a = entries[0].title;
@@ -17,7 +20,9 @@
 <div class="entries">
     {#each entries as entry}
         <div class="entry">
-            <h5>{entry.title}</h5>
+            <h3>{entry.title}</h3>
+            <img alt="Imagine Camera" src={entry.image} />
+            <h5>Rezerva</h5>
         </div>
     {/each}
 </div>
@@ -28,5 +33,16 @@
     }
     .entry {
         padding: 20px;
+    }
+    .entry img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 0 1em 0;
+    }
+    .entry h5 {
+        position: relative;
+        top: 300;
+        left: 0;
+        width: 100%;
     }
 </style>
