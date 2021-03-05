@@ -17,5 +17,7 @@ spec:
       containers:
       - name: cpn
         image: ghcr.io/georgepetri/cpn:latest
+        #todo  should not need this
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
