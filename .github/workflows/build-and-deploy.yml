@@ -15,8 +15,8 @@ on:
 
 env:
   IMAGE_NAME: cpn
-  CLUSTER_NAME: kube
-  CLUSTER_RESOURCE_GROUP: kube
+  CLUSTER_NAME: kubes
+  CLUSTER_RESOURCE_GROUP: kubes
   NAMESPACE: cpn
 
 jobs:
