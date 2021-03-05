@@ -3,9 +3,9 @@
         title: string;
         image: string;
     }[] = [
-        { title: "Camera1", image: "images/IMG_0107.JPEG" },
-        { title: "Camera2", image: "images/IMG_0108.JPEG" },
-        { title: "Camera3", image: "images/IMG_0109.JPG" },
+        { title: "Camera 1", image: "images/IMG_0107.JPEG" },
+        { title: "Camera 2", image: "images/IMG_0108.JPEG" },
+        { title: "Camera 3", image: "images/IMG_0109.JPG" },
     ];
 
     const a = entries[0].title;

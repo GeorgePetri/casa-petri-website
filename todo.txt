@@ -21,3 +21,5 @@ proper casing (Nav file)
 see container registry old builds removed
 update deps
 see uneeded deps
+tag images to lastest, for convetntion , see pipeline history for how to
+tag releases?
