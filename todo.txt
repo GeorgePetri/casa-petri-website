@@ -17,3 +17,4 @@ no warnings
 k8s configure ingress
 k8s remove undeede stuff, like extra load balancer
 k8s https
+proper casing (Nav file)
