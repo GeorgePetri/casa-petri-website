@@ -101,5 +101,5 @@ jobs:
       - uses: azure/k8s-deploy@v1
         with:
           manifests: |
-            manifests/azure-deployment.yml
+            manifests/azure-deployment.yaml
           namespace: ${{ env.NAMESPACE }}
