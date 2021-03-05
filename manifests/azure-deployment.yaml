@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpn-deployment
+  labels:
+    app: cpn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpn
+  template:
+    metadata:
+      labels:
+        app: cpn
+    spec:
+      containers:
+      - name: cpn
+        image: ghcr.io/georgepetri/cpn:latest
+        ports:
+        - containerPort: 3000
