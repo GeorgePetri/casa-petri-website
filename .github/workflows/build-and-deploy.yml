@@ -102,4 +102,5 @@ jobs:
         with:
           manifests: |
             manifests/azure-deployment.yaml
+            manifests/azure-loadbalancer.yaml
           namespace: ${{ env.NAMESPACE }}

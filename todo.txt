@@ -14,3 +14,6 @@ proper photos at proper resolutions
 todo test on mobile
 no errors
 no warnings
+k8s configure ingress
+k8s remove undeede stuff, like extra load balancer
+k8s https
