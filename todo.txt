@@ -5,7 +5,6 @@ ci
 cd
 svelte sapper
 .dockerignore
-domain: casapetri.ro
 container for prod/ci
 sudo docker run -dt -v /home/wry/casa-petri-website:/usr/src/app -v nodemodules:/usr/src/app/node_modules -p 3000:3000 cpn
 https://www.freecodecamp.org/news/how-to-enable-live-reload-on-docker-based-applications/
@@ -14,9 +13,7 @@ proper photos at proper resolutions
 test on mobile
 no errors
 no warnings
-k8s configure ingress
 k8s remove undeede stuff, like extra load balancer
-k8s https
 proper casing (Nav file)
 see container registry old builds removed
 update deps
@@ -28,3 +25,4 @@ make image smaller if i can, mayble alpine?
 delete extra azure resources, i think there is a extra public ip
 clean old replica sets
 delete dev-manifest.yaml ?
+seo
