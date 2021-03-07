@@ -17,5 +17,6 @@ spec:
           - path: /
             pathType: Prefix
             backend:
-              serviceName: cpn-service
-              servicePort: 80
+              name: cpn-service
+              port:
+                number: 80
