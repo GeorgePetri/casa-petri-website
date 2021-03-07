@@ -1,56 +1,47 @@
-<script>
-    import successkid from "images/successkid.jpg";
+<script lang="ts">
+    const entries: {
+        title: string;
+        image: string;
+    }[] = [
+        { title: "Camera 1", image: "images/IMG_0107.JPEG" },
+        { title: "Camera 2", image: "images/IMG_0108.JPEG" },
+        { title: "Camera 3", image: "images/IMG_0109.JPG" },
+    ];
+
+    const a = entries[0].title;
 </script>
 
 <svelte:head>
-    <title>Sapper project template</title>
+    <title>Camere</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Camerele noastre</h1>
 
-<figure>
-    <img alt="Success Kid" src={successkid} />
-    <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p>
-    <strong
-        >Try editing this file (src/routes/index.svelte) to test live reloading.</strong
-    >
-</p>
+<div class="entries">
+    {#each entries as entry}
+        <div class="entry">
+            <h3>{entry.title}</h3>
+            <img alt="Imagine Camera" src={entry.image} />
+            <h5>Rezerva</h5>
+        </div>
+    {/each}
+</div>
 
 <style>
-    h1,
-    figure,
-    p {
-        text-align: center;
-        margin: 0 auto;
+    .entries {
+        display: flex;
     }
-
-    h1 {
-        font-size: 2.8em;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin: 0 0 0.5em 0;
+    .entry {
+        padding: 20px;
     }
-
-    figure {
-        margin: 0 0 1em 0;
-    }
-
-    img {
+    .entry img {
         width: 100%;
         max-width: 400px;
-        margin: 0 0 1em 0;
     }
-
-    p {
-        margin: 1em auto;
-    }
-
-    @media (min-width: 480px) {
-        h1 {
-            font-size: 4em;
-        }
+    .entry h5 {
+        position: relative;
+        top: 300;
+        left: 0;
+        width: 100%;
     }
 </style>

@@ -25,3 +25,5 @@ tag images to lastest, for convetntion , see pipeline history for how to
 tag releases?
 todo test caching in all browser
 make image smaller if i can, mayble alpine?
+delete extra azure resources, i think there is a extra public ip
+clean old replica sets
