@@ -92,6 +92,7 @@ jobs:
         with:
           manifests: |
             manifests/azure-deployment.yaml
+            manifests/azure-ingress.yaml
           images: |
             ghcr.io/georgepetri/cpn:${{ github.sha }}
           namespace: ${{ env.NAMESPACE }}

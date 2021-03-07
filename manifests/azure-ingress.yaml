@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # remove this
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  defaultBackend:
+    service:
+      name: cpn-service
+      port:
+        number: 80
