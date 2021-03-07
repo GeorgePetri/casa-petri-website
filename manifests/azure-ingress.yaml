@@ -10,8 +10,12 @@ spec:
   - hosts:
     - casapetri.ro
     secretName: tls
-  defaultBackend:
-    service:
-      name: cpn-service
-      port:
-        number: 80
+  rules:
+    - host: casapetri.ro
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: cpn-service
+              servicePort: 80
