@@ -27,3 +27,4 @@ todo test caching in all browser
 make image smaller if i can, mayble alpine?
 delete extra azure resources, i think there is a extra public ip
 clean old replica sets
+delete dev-manifest.yaml ?
