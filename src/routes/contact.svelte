@@ -6,7 +6,7 @@
     <b>Telefon:</b> 0745006064
 </p>
 <p>
-    <b>>Adresa:</b> Constructorilor nr 12, Sanpetru, Brasov
+    <b>Adresa:</b> Constructorilor nr 12, Sanpetru, Brasov
 </p>
 <p>
     <b>Email:</b> casapetri@gmail.com
