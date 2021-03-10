@@ -1,3 +1,3 @@
 # casa-petri-website
 
-![Docker](https://github.com/GeorgePetri/casa-petri-website/workflows/Docker/badge.svg)
+[![build-and-deploy](https://github.com/GeorgePetri/casa-petri-website/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/GeorgePetri/casa-petri-website/actions/workflows/build-and-deploy.yml)
