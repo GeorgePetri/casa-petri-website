@@ -65,7 +65,7 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=${{ env.REGISTRY }}/${{ github.actor }}/$IMAGE_NAME
+          IMAGE_ID=${{ env.REGISTRY }}/george-petri/$IMAGE_NAME
 
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
@@ -79,4 +79,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: casapetri
-          images: ${{ env.REGISTRY }}/${{ github.actor }}/$IMAGE_NAME:${{ github.sha }}
+          images: ${{ env.REGISTRY }}/george-petri/$IMAGE_NAME:${{ github.sha }}
