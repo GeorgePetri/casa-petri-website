@@ -14,10 +14,8 @@ on:
   pull_request:
 
 env:
+  REGISTRY: ghcr.io
   IMAGE_NAME: cpn
-  CLUSTER_NAME: kubes
-  CLUSTER_RESOURCE_GROUP: kubes
-  NAMESPACE: cpn
 
 jobs:
   # Run tests.
@@ -26,7 +24,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       # todo should change this
       - name: Run tests
         run: |
@@ -44,20 +44,28 @@ jobs:
     needs: test
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     if: github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
-      - name: Log into registry
-        run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      - name: Log in to the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push image
         run: |
-          IMAGE_ID=ghcr.io/${{ github.actor }}/$IMAGE_NAME
+          IMAGE_ID=${{ env.REGISTRY }}/${{ github.actor }}/$IMAGE_NAME
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
@@ -67,32 +75,3 @@ jobs:
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
 
-  # Deploy to Azure Kubernetes Service
-  deploy:
-    needs: push
-
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v2
-
-      # Sets the target cluster.
-      - uses: azure/aks-set-context@v1
-        with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
-          cluster-name: ${{ env.CLUSTER_NAME }}
-          resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
-          
-      # Create the namespace if it doesn't exist.
-      - run: |
-          kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
-        
-      #Deploy to AKS.
-      - uses: azure/k8s-deploy@v1
-        with:
-          manifests: |
-            manifests/azure-deployment.yaml
-            manifests/azure-ingress.yaml
-          images: |
-            ghcr.io/georgepetri/cpn:${{ github.sha }}
-          namespace: ${{ env.NAMESPACE }}
