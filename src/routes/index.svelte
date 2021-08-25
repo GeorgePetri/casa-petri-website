@@ -13,6 +13,7 @@
 
 <svelte:head>
     <title>Camere</title>
+    <title>Test</title>
 </svelte:head>
 
 <h1>Camerele noastre</h1>
