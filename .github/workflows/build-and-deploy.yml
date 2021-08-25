@@ -75,9 +75,13 @@ jobs:
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
 
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
           app-name: casapetri
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
           images: push $IMAGE_ID:${{ github.sha }}
