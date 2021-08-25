@@ -79,4 +79,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: casapetri
-          images: ${{ env.REGISTRY }}/georgepetri/$IMAGE_NAME:${{ github.sha }}
+          images: ${{ env.REGISTRY }}/georgepetri/cpn:${{ github.sha }}
