@@ -67,11 +67,6 @@ jobs:
         run: |
           IMAGE_ID=${{ env.REGISTRY }}/${{ github.actor }}/$IMAGE_NAME
 
-          # Change all uppercase to lowercase
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-
-          echo IMAGE_ID=$IMAGE_ID
-
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
 
@@ -84,4 +79,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: casapetri
-          images: $IMAGE_ID:${{ github.sha }}
+          images: ${{ env.REGISTRY }}/${{ github.actor }}/$IMAGE_NAME:${{ github.sha }}
