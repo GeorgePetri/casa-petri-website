@@ -84,4 +84,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: casapetri
-          images: push $IMAGE_ID:${{ github.sha }}
+          images: $IMAGE_ID:${{ github.sha }}
