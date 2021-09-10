@@ -16,4 +16,5 @@ delete extra azure resources, i think there is a extra public ip
 clean old replica sets
 seo
 fix firefox has blocked parts of the page which are not secure
-tls
+social links
+remove cookies if not needed
