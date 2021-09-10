@@ -1,48 +1,59 @@
-<script lang="ts">
-    const entries: {
-        title: string;
-        image: string;
-    }[] = [
-        { title: "Camera 1", image: "images/IMG_0107.JPEG" },
-        { title: "Camera 2", image: "images/IMG_0108.JPEG" },
-        { title: "Camera 3", image: "images/IMG_0109.JPG" },
-    ];
+<script context="module" lang="ts">
+	export const prerender = true;
+</script>
 
-    const a = entries[0].title;
+<script lang="ts">
+	import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
-    <title>Camere</title>
-    <title>Test</title>
+	<title>Home</title>
 </svelte:head>
 
-<h1>Camerele noastre</h1>
+<section>
+	<h1>
+		<div class="welcome">
+			<picture>
+				<source srcset="svelte-welcome.webp" type="image/webp" />
+				<img src="svelte-welcome.png" alt="Welcome" />
+			</picture>
+		</div>
 
-<div class="entries">
-    {#each entries as entry}
-        <div class="entry">
-            <h3>{entry.title}</h3>
-            <img alt="Imagine Camera" src={entry.image} />
-            <h5>Rezerva</h5>
-        </div>
-    {/each}
-</div>
+		to your new<br />SvelteKit app
+	</h1>
+
+	<h2>
+		try editing <strong>src/routes/index.svelte</strong>
+	</h2>
+
+	<Counter />
+</section>
 
 <style>
-    .entries {
-        display: flex;
-    }
-    .entry {
-        padding: 20px;
-    }
-    .entry img {
-        width: 100%;
-        max-width: 400px;
-    }
-    .entry h5 {
-        position: relative;
-        top: 300;
-        left: 0;
-        width: 100%;
-    }
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+	}
+
+	h1 {
+		width: 100%;
+	}
+
+	.welcome {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding: 0 0 calc(100% * 495 / 2048) 0;
+	}
+
+	.welcome img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		display: block;
+	}
 </style>
