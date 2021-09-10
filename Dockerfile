@@ -1,20 +1,22 @@
-FROM node:14
+FROM node:14-alpine
+
+# install dependencies
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Copy all local files into the image.
+COPY . .
+
+RUN npm run build
+
+FROM node:14-alpine
 
 LABEL org.opencontainers.image.source=https://github.com/georgepetri/casa-petri-website
 
-#todo not sure i need this
-WORKDIR /usr/src/app
-
-#todo check that this does the .lock thing
-COPY package*.json ./
-
-RUN npm ci
-# If you are building your code for production
-# RUN npm ci --only=production
-
-#copy source code
+WORKDIR /app
+COPY --from=0 /app .
 COPY . .
 
 EXPOSE 3000
-
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["node", "./build"]

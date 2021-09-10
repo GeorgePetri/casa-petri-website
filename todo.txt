@@ -1,12 +1,6 @@
 update readme
 update description
 add license
-ci
-cd
-.dockerignore
-container for prod/ci
-sudo docker run -dt -v /home/wry/casa-petri-website:/usr/src/app -v nodemodules:/usr/src/app/node_modules -p 3000:3000 cpn
-https://www.freecodecamp.org/news/how-to-enable-live-reload-on-docker-based-applications/
 what to do about package-lock.json
 proper photos at proper resolutions
 test on mobile
@@ -16,11 +10,10 @@ proper casing (Nav file)
 see container registry old builds removed
 update deps
 see uneeded deps
-tag images to lastest, for convetntion , see pipeline history for how to
-tag releases?
 todo test caching in all browser
 make image smaller if i can, mayble alpine?
 delete extra azure resources, i think there is a extra public ip
 clean old replica sets
 seo
 fix firefox has blocked parts of the page which are not secure
+tls
