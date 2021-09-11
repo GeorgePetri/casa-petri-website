@@ -3,10 +3,6 @@
 </script>
 
 <header>
-	<a href="/">
-		<img src="logo-header.svg" alt="Logo." width="150" height="150" />
-	</a>
-
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
@@ -22,7 +18,7 @@
 			<li class:active={$page.path === '/contact'}>
 				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
+			<li />
 			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -30,16 +26,27 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
+	<a href="/">
+	    <img class="test" src="logo-header.svg" alt="Logo." width="150" height="150" />
+    </a>
+	<a href="/">
+		<img src="logo-header.svg" alt="Logo." width="150" height="150" />
+	</a>
 </header>
 
 <style>
 	header {
+		background: var(--secondary-color);
 		display: flex;
 		justify-content: space-between;
 	}
+    header > nav {
+        flex: 1 0 0;
+    }
+    header > a {
+        text-align: center;
+        flex: 1 0 0;
+    }
 
 	nav {
 		display: flex;
