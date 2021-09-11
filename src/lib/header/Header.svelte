@@ -19,7 +19,7 @@
 				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
 			<li />
-			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
+			<li class:active={$page.path === '/photos'}><a sveltekit:prefetch href="/photos">Poze</a></li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -27,26 +27,27 @@
 	</nav>
 
 	<a href="/">
-	    <img class="test" src="logo-header.svg" alt="Logo." width="150" height="150" />
-    </a>
-	<a href="/">
-		<img src="logo-header.svg" alt="Logo." width="150" height="150" />
+		<img class="test" src="logo-header.svg" alt="Logo." width="150" height="150" />
 	</a>
+	<div><span>(0745) 006 064</span><span>Constructorilor nr 12, Sanpetru, Brasov</span></div>
 </header>
 
 <style>
 	header {
 		background: var(--secondary-color);
 		display: flex;
+        align-items: center;
 		justify-content: space-between;
 	}
-    header > nav {
-        flex: 1 0 0;
-    }
-    header > a {
-        text-align: center;
-        flex: 1 0 0;
-    }
+	header > * {
+		text-align: center;
+		flex: 1 0 0;
+	}
+
+	header > div {
+		display: flex;
+		justify-content: space-around;
+	}
 
 	nav {
 		display: flex;

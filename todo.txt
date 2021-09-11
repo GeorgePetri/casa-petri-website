@@ -6,15 +6,14 @@ proper photos at proper resolutions
 test on mobile
 no errors
 no warnings
-proper casing (Nav file)
 see container registry old builds removed
 update deps
 see uneeded deps
 todo test caching in all browser
-make image smaller if i can, mayble alpine?
 delete extra azure resources, i think there is a extra public ip
-clean old replica sets
 seo
 fix firefox has blocked parts of the page which are not secure
 social links
 remove cookies if not needed
+delete svelte sample code
+recheck colors everywhere
