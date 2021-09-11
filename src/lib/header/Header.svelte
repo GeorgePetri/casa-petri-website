@@ -1,14 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
+	<a href="/">
+		<img src="logo-header.svg" alt="Logo." />
+	</a>
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -16,9 +13,15 @@
 		</svg>
 		<ul>
 			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Acasa</a></li>
-			<li class:active={$page.path === '/room-1'}><a sveltekit:prefetch href="/room-1">Camera German Style</a></li>
-			<li class:active={$page.path === '/room-2'}><a sveltekit:prefetch href="/room-2">Camera Italian Style</a></li>
-			<li class:active={$page.path === '/contact'}><a sveltekit:prefetch href="/contact">Contact</a></li>
+			<li class:active={$page.path === '/room-1'}>
+				<a sveltekit:prefetch href="/room-1">Camera German Style</a>
+			</li>
+			<li class:active={$page.path === '/room-2'}>
+				<a sveltekit:prefetch href="/room-2">Camera Italian Style</a>
+			</li>
+			<li class:active={$page.path === '/contact'}>
+				<a sveltekit:prefetch href="/contact">Contact</a>
+			</li>
 			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
 		</ul>
