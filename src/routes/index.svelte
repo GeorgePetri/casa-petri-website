@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Casa Petri</title>
 </svelte:head>
 
 <section>

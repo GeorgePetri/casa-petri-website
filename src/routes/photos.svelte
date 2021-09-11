@@ -8,5 +8,9 @@
 	const images: string[] = ['svelte-welcome.png', 'svelte-welcome.png'];
 </script>
 
+<svelte:head>
+	<title>Poze</title>
+</svelte:head>
+
 <h1>Poze</h1>
 <Gallery {images} />
