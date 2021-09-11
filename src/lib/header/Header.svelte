@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Fa from 'svelte-fa';
+	import { faPhone } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <header>
@@ -29,14 +31,18 @@
 	<a href="/">
 		<img class="test" src="logo-header.svg" alt="Logo." width="150" height="150" />
 	</a>
-	<div><span>(0745) 006 064</span><span>Constructorilor nr 12, Sanpetru, Brasov</span></div>
+	<div>
+		<span><Fa icon={faPhone} />(0745) 006 064</span><span
+			>Constructorilor nr 12, Sanpetru, Brasov</span
+		>
+	</div>
 </header>
 
 <style>
 	header {
 		background: var(--secondary-color);
 		display: flex;
-        align-items: center;
+		align-items: center;
 		justify-content: space-between;
 	}
 	header > * {
