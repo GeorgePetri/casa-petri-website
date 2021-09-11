@@ -2,7 +2,6 @@ update readme
 update description
 add license
 what to do about package-lock.json
-proper photos at proper resolutions
 test on mobile
 no errors
 no warnings
@@ -17,3 +16,4 @@ social links
 remove cookies if not needed
 delete svelte sample code
 recheck colors everywhere
+order photos
