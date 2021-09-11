@@ -2,8 +2,19 @@
 	export let images: string[];
 </script>
 
-<ul>
+<div>
 	{#each images as image}
-		<li><img src={image} alt={image} /></li>
+		<img src={image} alt={image} />
 	{/each}
-</ul>
+</div>
+
+<style>
+	div {
+		display: flex;
+        flex-direction: column;
+	}
+
+    img {
+        padding: 10px;
+    }
+</style>
