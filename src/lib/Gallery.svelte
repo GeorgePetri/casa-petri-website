@@ -15,6 +15,9 @@
 	}
 
     img {
+        display: block;
+        width: 100%;
+        height: auto;
         padding: 10px;
     }
 </style>

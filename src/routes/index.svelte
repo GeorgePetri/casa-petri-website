@@ -10,4 +10,3 @@
 </svelte:head>
 
 <h1>Casa Petri</h1>
-<h1>Casa Petri</h1>
