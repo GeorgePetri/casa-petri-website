@@ -8,16 +8,27 @@
 </script>
 
 <svelte:head>
-    <title>Contact</title>
+	<title>Contact</title>
 </svelte:head>
 
-<h1>Contact</h1>
-<p>
-    <b><Fa icon={faPhone} /> Telefon:</b> 0745006064
-</p>
-<p>
-    <b><Fa icon={faMapMarkerAlt} /> Adresa:</b> Constructorilor nr 12, Sanpetru, Brasov
-</p>
-<p>
-    <b><Fa icon={faEnvelope} /> Email:</b> casapetri@gmail.com
-</p>
+<div>
+	<h1>Contact</h1>
+	<p>
+		<b><Fa icon={faPhone} /> Telefon:</b> 0745006064
+	</p>
+	<p>
+		<b><Fa icon={faMapMarkerAlt} /> Adresa:</b> Constructorilor nr 12, Sanpetru, Brasov
+	</p>
+	<p>
+		<b><Fa icon={faEnvelope} /> Email:</b> casapetri@gmail.com
+	</p>
+</div>
+
+<style>
+	div {
+        display: flex;
+        flex-direction: column;
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+</style>
