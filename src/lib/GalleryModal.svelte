@@ -1,10 +1,18 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+
 	export let image: string;
 </script>
 
 {#if image}
-	<div class="container">
-		<img src={image} alt={image} on:click={() => (image = null)} />
+	<div
+		class="container"
+		in:fade={{ duration: 200 }}
+		out:fade={{ duration: 200 }}
+		on:click={() => (image = null)}
+	>
+		<div class="backdrop" />
+			<img src={image} alt={image} />
 	</div>
 {/if}
 
@@ -20,7 +28,13 @@
 		justify-content: center;
 		align-items: center;
 	}
-
+	div.backdrop {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
 	img {
 		display: block;
 		width: 80%;

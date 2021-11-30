@@ -26,6 +26,13 @@
 		display: block;
 		width: var(--image-width);
 		height: 100%;
-		padding: 10px;
+        padding: 10px;
+	}
+	img:hover {
+		border: var(--tertiary-color);
+		border-style: solid;
+		border-radius: 5px;
+		margin: 3px;
+		padding: 4px;
 	}
 </style>
