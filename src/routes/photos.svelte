@@ -48,4 +48,4 @@
 </svelte:head>
 
 <h1>Poze</h1>
-<Gallery {images} />
+<Gallery {images} imageWidth={30}/>

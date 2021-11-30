@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let images: string[];
+    export let imageWidth: number;
 </script>
 
-<div>
+<div style="--image-width: {imageWidth}%">
 	{#each images as image}
 		<img src={image} alt={image} />
 	{/each}
@@ -11,13 +12,15 @@
 <style>
 	div {
 		display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
 	}
 
     img {
         display: block;
-        width: 100%;
-        height: auto;
+        width: var(--image-width);
+        height: 100%;
         padding: 10px;
     }
 </style>
