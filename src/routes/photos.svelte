@@ -47,5 +47,4 @@
 	<title>Poze</title>
 </svelte:head>
 
-<h1>Poze</h1>
 <Gallery {images} imageWidth={30}/>
