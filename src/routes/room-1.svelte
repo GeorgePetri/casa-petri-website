@@ -3,6 +3,15 @@
 </script>
 
 <script lang="ts">
+	import Fa from 'svelte-fa';
+	import {
+		faParking,
+		faBed,
+		faWifi,
+		faUtensils,
+		faWind,
+		faCoffee
+	} from '@fortawesome/free-solid-svg-icons';
 	import Gallery from '$lib/Gallery.svelte';
 
 	const images: string[] = [
@@ -28,11 +37,11 @@
 		<p>Terasa: Access foisor si gradina</p>
 		<p>Suprafata utila: 30mp</p>
 		<p>Recomandari:Familie cu 1 copil, 3 prieteni</p>
-		<p>Parcare: In curte, pe strada</p>
-		<p>Canapea extensibila: Ideal daca aveti nevoie de inca un loc de dormit</p>
-        <p>Internet de mare viteza: Rds conectat la un router de top</p>
-        <p>Minifrigider: Pentru a depozita si raci alimente/bauituri</p>
-        <p>Aparat de aer conditionat</p>
-        <p>Aparat cafea nespresso</p>
+		<p><Fa icon={faParking} />Parcare: In curte, pe strada</p>
+		<p><Fa icon={faBed} />Canapea extensibila: Ideal daca aveti nevoie de inca un loc de dormit</p>
+		<p><Fa icon={faWifi} />Internet de mare viteza: Rds conectat la un router de top</p>
+		<p><Fa icon={faUtensils} />Minifrigider: Pentru a depozita si raci alimente/bauituri</p>
+		<p><Fa icon={faWind} />Aparat de aer conditionat</p>
+		<p><Fa icon={faCoffee} />Aparat cafea nespresso</p>
 	</div>
 </div>
