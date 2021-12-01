@@ -30,18 +30,48 @@
 </svelte:head>
 
 <h1>German style</h1>
-<div>
-	<Gallery {images} imageWidth={10} />
-	<div>
-		<p>Camera: dormitor cu baie</p>
-		<p>Terasa: Access foisor si gradina</p>
-		<p>Suprafata utila: 30mp</p>
-		<p>Recomandari:Familie cu 1 copil, 3 prieteni</p>
-		<p><Fa icon={faParking} />Parcare: In curte, pe strada</p>
-		<p><Fa icon={faBed} />Canapea extensibila: Ideal daca aveti nevoie de inca un loc de dormit</p>
-		<p><Fa icon={faWifi} />Internet de mare viteza: Rds conectat la un router de top</p>
-		<p><Fa icon={faUtensils} />Minifrigider: Pentru a depozita si raci alimente/bauituri</p>
-		<p><Fa icon={faWind} />Aparat de aer conditionat</p>
-		<p><Fa icon={faCoffee} />Aparat cafea nespresso</p>
+<div class="container">
+	<div class="half">
+		<Gallery {images} imageWidth={30} />
+	</div>
+	<div class="half">
+		<h2>Descriere</h2>
+        <p>Camera de tip dormitor cu baie</p>
+		<p>Access foisor si gradina</p>
+		<p>30mp suprafata utia</p>
+		<p>Ideal pentru familie cu un copil, sau pentru trei prieteni</p>
+        <br>
+		<h2>Facilitati</h2>
+		<h3><Fa icon={faParking} /> <b>Parcare </b></h3>
+		<p>In curte, pe strada</p>
+		<h3>
+			<Fa icon={faBed} /> <b>Canapea extensibila</b>
+		</h3>
+		<p>Ideal daca aveti nevoie de inca un loc de dormit</p>
+		<h3><Fa icon={faWifi} /> <b>Internet de mare viteza</b></h3>
+		<p>Rds conectat la un router de top</p>
+		<h3><Fa icon={faUtensils} /> <b> Minifrigider</b></h3>
+		<p>Pentru a depozita si raci alimente/bauituri</p>
+		<h3><Fa icon={faWind} /> <b>Aparat de aer conditionat</b></h3>
+		<h3><Fa icon={faCoffee} /> <b>Aparat cafea nespresso</b></h3>
 	</div>
 </div>
+
+<style>
+	div.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.half {
+		flex-basis: 50%;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-weight: 400;
+		color: var(--heading-color);
+		font-size: 1.25rem;
+	}
+</style>

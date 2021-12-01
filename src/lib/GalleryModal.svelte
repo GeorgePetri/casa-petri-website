@@ -12,7 +12,7 @@
 		on:click={() => (image = null)}
 	>
 		<div class="backdrop" />
-			<img src={image} alt={image} />
+		<img src={image} alt={image} />
 	</div>
 {/if}
 
@@ -37,7 +37,7 @@
 	}
 	img {
 		display: block;
-		width: 80%;
-		height: 80%;
+		width: auto;
+		height: 90%;
 	}
 </style>
