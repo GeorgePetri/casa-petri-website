@@ -23,7 +23,7 @@
 	</nav>
 
 	<a href="/">
-		<img src="logo-header.svg" alt="Logo." width="150" height="150" />
+		<img src="logo-header.svg" alt="Logo" width="150" height="150" />
 	</a>
 	<div>
 		<span><Fa icon={faPhone} />(0745) 006 064</span><span
@@ -35,9 +35,21 @@
 <style>
 	header {
 		background: var(--secondary-color);
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		align-items: center;
 		justify-content: space-between;
+	}
+	@media only screen and (max-width: 800px) {
+		header {
+			grid-template-columns: 1fr;
+		}
+        header > nav {
+            order: 2
+        }
+		header > div {
+			visibility: hidden;
+		}
 	}
 	header > * {
 		text-align: center;
@@ -50,7 +62,7 @@
 		color: var(--heading-color);
 	}
 
-	nav {
+	header > nav {
 		display: flex;
 		justify-content: center;
 	}
