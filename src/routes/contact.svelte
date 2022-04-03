@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Contact</title>
+	<title>Casa Petri - Contact</title>
 </svelte:head>
 
 <div>

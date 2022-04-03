@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Casa Petri</title>
+	<title>Casa Petri: Cazare de lux in Sânpetru</title>
 </svelte:head>
 
 <div class="container">

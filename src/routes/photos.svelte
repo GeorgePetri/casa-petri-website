@@ -44,7 +44,7 @@
 </script>
 
 <svelte:head>
-	<title>Poze</title>
+	<title>Casa Petri - Poze</title>
 </svelte:head>
 
 <Gallery {images} imageWidth={30}/>

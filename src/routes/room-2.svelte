@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-	<title>Italian style</title>
+	<title>Casa Petri - Italian style</title>
 </svelte:head>
 
 

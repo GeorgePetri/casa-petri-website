@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-	<title>German style</title>
+	<title>Casa Petri - German style</title>
 </svelte:head>
 
 <h1>German style</h1>
