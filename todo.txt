@@ -18,3 +18,4 @@ delete svelte sample code
 recheck colors everywhere
 order photos
 azure set not going in standby
+add version and credits to site, maybe a footer?
