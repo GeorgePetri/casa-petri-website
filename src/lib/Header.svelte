@@ -7,16 +7,16 @@
 <header>
 	<nav>
 		<ul>
-			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Acasa</a></li>
-			<li class:active={$page.path === '/room-1'}>
+			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Acasa</a></li>
+			<li class:active={$page.url.pathname === '/room-1'}>
 				<a sveltekit:prefetch href="/room-1">Camera German Style</a>
 			</li>
-			<li class:active={$page.path === '/room-2'}>
+			<li class:active={$page.url.pathname === '/room-2'}>
 				<a sveltekit:prefetch href="/room-2">Camera Italian Style</a>
 			</li>
 			<li />
-			<li class:active={$page.path === '/photos'}><a sveltekit:prefetch href="/photos">Poze</a></li>
-			<li class:active={$page.path === '/contact'}>
+			<li class:active={$page.url.pathname === '/photos'}><a sveltekit:prefetch href="/photos">Poze</a></li>
+			<li class:active={$page.url.pathname === '/contact'}>
 				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
 		</ul>
