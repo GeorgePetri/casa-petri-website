@@ -9,29 +9,23 @@
 	<title>Casa Petri: Cazare de lux in Sânpetru</title>
 </svelte:head>
 
-<div class="container">
-	<div class="image-container" on:click={() => (document.location = 'room-1')}>
+<div>
+    <a href="room-1">
 		<img src="room-1-04.jpg" alt="poza interior camera 1" />
 		<h1 class="image-title">German style</h1>
-	</div>
-	<div class="image-container" on:click={() => (document.location = 'room-2')}>
+    </a>
+    <a href="room-2">
 		<img src="room-2-02.jpg" alt="poza interior camera 2" />
 		<h1 class="image-title">Italian style</h1>
-	</div>
+    </a>
 </div>
 
 <style>
-	div.container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
-	div.image-container {
-		position: relative;
-		width: 40%;
-		padding: 10px;
-		padding-top: 20px;
+	div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
 	}
 	h1.image-title {
 		color: var(--pure-white);
@@ -40,10 +34,7 @@
 		bottom: 10%;
 	}
 	img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		padding: 10px;
+        width: 100%;
 	}
 	img:hover {
 		border: var(--tertiary-color);
