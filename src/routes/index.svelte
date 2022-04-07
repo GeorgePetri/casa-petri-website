@@ -9,38 +9,54 @@
 	<title>Casa Petri: Cazare de lux in Sânpetru</title>
 </svelte:head>
 
-<div>
-    <a href="room-1">
-		<img src="room-1-04.jpg" alt="poza interior camera 1" />
-		<h1 class="image-title">German style</h1>
-    </a>
-    <a href="room-2">
-		<img src="room-2-02.jpg" alt="poza interior camera 2" />
-		<h1 class="image-title">Italian style</h1>
-    </a>
+<div class="container">
+	<a href="room-1">
+		<div>
+			<img src="room-1-04.jpg" alt="poza interior camera 1" />
+			<h1>German style</h1>
+		</div>
+	</a>
+	<a href="room-2">
+		<div>
+			<img src="room-2-02.jpg" alt="poza interior camera 2" />
+			<h1>Italian style</h1>
+		</div>
+	</a>
 </div>
 
 <style>
-	div {
+	div.container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
+		padding: 2%;
+		gap: calc(2% - 10px);
 	}
-	h1.image-title {
+	@media only screen and (max-width: 800px) {
+		div.container {
+			grid-template-columns: 1fr;
+		}
+	}
+	h1 {
 		color: var(--pure-white);
 		position: absolute;
-		left: 10%;
-		bottom: 10%;
+		left: 5%;
+		bottom: 5%;
 	}
 	img {
-        width: 100%;
+		display: block;
+		width: 100%;
 	}
-	img:hover {
+	a {
+		padding: 10px;
+	}
+	a:hover {
 		border: var(--tertiary-color);
 		border-style: solid;
 		border-radius: 5px;
 		margin: 3px;
 		padding: 4px;
+	}
+	div {
+		position: relative;
 	}
 </style>
