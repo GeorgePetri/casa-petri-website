@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 # install dependencies
 WORKDIR /app
@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-FROM node:14-alpine
+FROM node:16-alpine
 
 LABEL org.opencontainers.image.source=https://github.com/georgepetri/casa-petri-website
 
