@@ -19,3 +19,4 @@ recheck colors everywhere
 order photos
 azure set not going in standby
 add version and credits to site, maybe a footer?
+add version to site, to help debugging
