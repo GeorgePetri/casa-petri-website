@@ -2,9 +2,9 @@
   "name": "~TODO~",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --ignore-path .gitignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -33,6 +33,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
-    "svelte-fa": "^2.3.3"
+    "svelte-fa": "^2.3.3",
+    "vite": "^3.0.3"
   }
 }
